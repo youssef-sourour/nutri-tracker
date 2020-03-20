@@ -1,0 +1,53 @@
+<div class="content">
+  <ion-card class="form-container">
+    <ion-card-content>
+      <div class="form-content">
+        <h1>Sign In</h1>
+        <div class="login-options">
+          <button class="fb">
+            <i class="fab fa-facebook-square"></i>
+            Facebook
+          </button>
+          <button class="google" (click)="auth.googleLogin()">
+            <i class="fab fa-google"></i>
+            Google
+          </button>
+        </div>
+        <form [formGroup]="loginForm">
+
+          <input
+            matInput
+            formControlName="username"
+            type="text"
+            placeholder="Username or Email"
+            autocomplete="off"
+          />
+          <input
+            matInput
+            formControlName="password"
+            type="password"
+            placeholder="Password"
+            autocomplete="off"
+          />
+  
+          <!-- [disabled]="loginForm.invalid || !passwordDoesMatch || loading" -->
+            <button
+            *ngIf="!isPasswordReset"
+            type="submit">
+            Submit
+            </button>
+  
+            <div class="forgot-pw-container">
+              <a routerLink="/" id="forgot-pw">Forgot Password?</a>
+            </div>
+        </form>
+      </div>
+
+      <p id="not-member">Not a member? 
+        <span id="signup">
+          <a (click)="changeType('signup')">Sign up now</a>
+        </span>
+      </p>
+    </ion-card-content>
+  </ion-card>
+</div>

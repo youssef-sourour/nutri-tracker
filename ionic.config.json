@@ -1,5 +1,7 @@
 {
   "name": "nutri-tracker",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
