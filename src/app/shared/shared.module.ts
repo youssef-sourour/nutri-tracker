@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { SalesComponent } from './sales/sales.component';
 
 const components = [
   LoginComponent,
@@ -16,8 +17,10 @@ const components = [
   RegisterComponent,
   DashboardComponent,
   MenuComponent,
-  HeaderComponent
+  HeaderComponent,
+  SalesComponent
 ];
+
 @NgModule({
   declarations: [...components],
   imports: [
