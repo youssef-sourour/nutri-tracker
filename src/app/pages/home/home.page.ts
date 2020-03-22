@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, ChangeDetectorRef, AfterViewInit, OnChanges } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
@@ -10,10 +10,10 @@ export class HomePage {
 
   type: 'login' | 'signup' | 'reset' = 'signup';
 
-  constructor(public auth: AuthService) {}
+  headerTitle = 'Home';
 
-  changeType(type: 'login' | 'signup' | 'reset') {
-    this.type = type;
+  constructor(public auth: AuthService) {
   }
+
 
 }

@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>test</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ headerTitle || 'Menu Title' }}</ion-title>
+    <ion-buttons collapse="true" slot="end">
+      <ng-container *ngFor="let button of buttons">
+        <ion-button color="primary">{{ button.name || 'Unknown Button' }}</ion-button>
+      </ng-container>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
 
 </ion-content>
