@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IonButtons, IonButton } from '@ionic/angular';
 
 @Component({
@@ -9,7 +9,8 @@ import { IonButtons, IonButton } from '@ionic/angular';
 export class MenuComponent implements OnInit {
 
   // header items
-  headerTitle: string;
+  @Input() headerTitle: string;
+
   buttonsList: IonButtons;
   buttons: any[]; // not yet sure which one to use - but should be btn properties
 

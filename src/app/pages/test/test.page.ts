@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/services/menu/menu.service';
 
 @Component({
   selector: 'app-test',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestPage implements OnInit {
 
-  constructor() { }
+  constructor(private menu: MenuService) { }
 
   ngOnInit() {
+    this.menu.setHeaderTitle('Test Page');
   }
 
 }
