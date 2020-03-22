@@ -1,0 +1,44 @@
+<ion-menu
+  side="start"
+  type="push"
+  contentId="main-content"
+  #sideMenu>
+    <ion-header>
+      <ion-toolbar color="dark">
+        <h3 id="toolbarHeader">Menu</h3>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/" (click)="sideMenu.close()">
+          <ion-label>Home</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<div class="content" id="main-content">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{ headerTitle || 'Menu Title' }}</ion-title>
+      <ion-buttons>
+        <ng-container *ngFor="let button of buttons">
+          <ion-button
+          *ngIf="!button.backButton" 
+          slot="icon-only" 
+          name="person-circle">{{ button.name || 'Unknown Button' }}</ion-button>
+        </ng-container>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content >
+    <ng-content></ng-content>
+  </ion-content>
+
+</div>
+
+

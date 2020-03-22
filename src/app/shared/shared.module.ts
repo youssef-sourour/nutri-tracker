@@ -6,9 +6,10 @@ import { IonicModule } from '@ionic/angular';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
-  declarations: [LoginComponent, ProfileComponent, RegisterComponent, DashboardComponent],
+  declarations: [LoginComponent, ProfileComponent, RegisterComponent, DashboardComponent, MenuComponent],
   imports: [
     CommonModule,
     IonicModule,
@@ -19,7 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ProfileComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    MenuComponent
   ]
 })
 export class SharedModule { }
