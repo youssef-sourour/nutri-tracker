@@ -24,10 +24,21 @@ export class MenuService {
   }
 
   setHeaderTitle(header: string) {
-    const data = this.menu$.getValue();
-    data.headerTitle = header;
+    this.data.headerTitle = header;
+    this.menu$.next(this.data);
+  }
 
-    this.menu$.next(data);
+  setButtons(buttons: ButtonData[]) {
+    this.data.buttons = buttons;
+    this.menu$.next(this.data);
+  }
+
+  setBackButton(hasButton: boolean) {
+    this.data.hasBackButton = hasButton;
+  }
+
+  get data() {
+    return this.menu$.getValue();
   }
 
 }

@@ -1,4 +1,11 @@
 interface MenuData {
   headerTitle: string;
-  buttons?: any[];
+  buttons?: ButtonData[];
+  hasBackButton?: boolean;
+}
+
+interface ButtonData {
+  name: string;
+  link?: string;
+  isButton?: boolean;
 }

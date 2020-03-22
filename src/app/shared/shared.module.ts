@@ -7,14 +7,15 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuComponent } from './menu/menu.component';
-
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [LoginComponent, ProfileComponent, RegisterComponent, DashboardComponent, MenuComponent],
   imports: [
     CommonModule,
     IonicModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     ProfileComponent,

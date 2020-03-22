@@ -8,13 +8,8 @@ import { IonButtons, IonButton } from '@ionic/angular';
 })
 export class MenuComponent implements OnInit {
 
-  // header items
-  @Input() headerTitle: string;
-
-  buttonsList: IonButtons;
-  buttons: any[]; // not yet sure which one to use - but should be btn properties
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {}
 
