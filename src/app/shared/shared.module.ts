@@ -8,8 +8,18 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+
+const components = [
+  LoginComponent,
+  ProfileComponent,
+  RegisterComponent,
+  DashboardComponent,
+  MenuComponent,
+  HeaderComponent
+];
 @NgModule({
-  declarations: [LoginComponent, ProfileComponent, RegisterComponent, DashboardComponent, MenuComponent],
+  declarations: [...components],
   imports: [
     CommonModule,
     IonicModule,
@@ -17,12 +27,6 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule
   ],
-  exports: [
-    ProfileComponent,
-    LoginComponent,
-    RegisterComponent,
-    DashboardComponent,
-    MenuComponent
-  ]
+  exports: [...components]
 })
 export class SharedModule { }

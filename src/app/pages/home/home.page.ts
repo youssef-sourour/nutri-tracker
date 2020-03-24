@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked, ChangeDetectorRef, AfterViewInit, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
