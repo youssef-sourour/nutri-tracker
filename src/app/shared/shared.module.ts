@@ -18,6 +18,7 @@ const components = [
   MenuComponent,
   HeaderComponent
 ];
+
 @NgModule({
   declarations: [...components],
   imports: [
