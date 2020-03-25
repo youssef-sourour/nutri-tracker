@@ -6,13 +6,20 @@
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <ng-container *ngIf="auth.user$ | async as user; else login" >
+    <ng-container *ngIf="auth.user$ | async as user; else login">
       <app-dashboard [user]="user"></app-dashboard>
     </ng-container>
     
     <ng-template #login>
-      <app-register (changeValEmitter)='changeType($event)' *ngIf="type === 'signup'"></app-register>
-      <app-login (changeValEmitter)='changeType($event)' *ngIf="type === 'login'"></app-login>
+      <app-register 
+      (changeValEmitter)='changeType($event)' 
+      *ngIf="type === 'signup'">
+      </app-register>
+
+      <app-login 
+      (changeValEmitter)='changeType($event)' 
+      *ngIf="type === 'login'">
+      </app-login>
     </ng-template>
   </div>
 </ion-content>
